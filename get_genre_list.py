@@ -18,22 +18,36 @@ def get_genre_list():
 
         if file_key == '1':
             file_str = 'Music.txt'
+            list_type = 'Music'
         elif file_key == '2':
             file_str = 'Movies.txt'
+            list_type = 'Movies'
         elif file_key == '3':
             file_str = 'Games.txt'
+            list_type = 'Games'
         elif file_key == '4':
-            file_str = 'Restaurants'
+            file_str = 'Restaurants.txt'
+            list_type = 'Restaurants'
         elif file_key == '5':
             file_str = input("Please enter the file name of the list you want to use.\n")
-        return file_str
+            works = False
+            while not works:
+                try:
+                    open(file_str, 'r')
+                    works = True
+                except Exception:
+                    file_str = input("Please enter a valid file name.\n")
+            list_type = 'Custom'
+        return file_str, list_type
 
-    file_str = get_file_key()
+    file_str, list_type = get_file_key()
     file = open(file_str, 'r')
     genres = file.readline()
     genres = genres.split()
     file.readline()
     type_string = file.readline()
-    genre_list = genres + [type_string]
+    genre_list = genres + [type_string] + [list_type]
 
     return genre_list
+
+print(get_genre_list())
