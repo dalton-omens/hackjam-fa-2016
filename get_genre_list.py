@@ -37,5 +37,3 @@ def get_genre_list():
     genre_list = genres + [type_string]
 
     return genre_list
-
-new_list = get_genre_list()
