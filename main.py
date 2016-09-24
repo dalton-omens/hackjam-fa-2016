@@ -1,5 +1,10 @@
 from math import pi
 
-radius = input('what is the radius?')
+try:
+    radius = float(input('what is the radius?'))
+    print('The radius is ' + str(pi * radius ** 2))
 
-print('The radius is ' + pi * radius ** 2)
+except:
+    print('you fool, that isn\'t a number')
+
+
