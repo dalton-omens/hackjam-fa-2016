@@ -1,6 +1,6 @@
 def make_preferences(genre_list, num_users):
     def prompt():
-        print('\nWhat are you interested in? Here are your options: If you\'re done, type \"Done\".')
+        print('\nWhat are you interested in? Here are your options: If you\'re done, type \"Done\".\n')
         lst = ''
         for i in range(len(genre_list) - 2):
             lst = lst + genre_list[i] + ', '
