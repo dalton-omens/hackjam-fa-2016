@@ -49,5 +49,3 @@ def get_genre_list():
     genre_list = genres + [type_string] + [list_type]
 
     return genre_list
-
-print(get_genre_list())
