@@ -1,2 +1,3 @@
 Action Adventure Fighting Party Platformer Puzzle Racing Real-Time Role-Playing Simulation Sports Strategy Turn-Based
+
 type of game
