@@ -1,5 +1,5 @@
 def get_genre_list():
-#example output: ['Rock', 'Jazz', 'Pop', 'Hip-hop', 'Classical', 'Rap', 'Dubstep', 'Country', '80s', '70s', '60s', '50s', 'genre of music', 'Music']
+
     def get_file_key():
 
         file_key = input("What kind of list do you want? Please input the associated number.\n"
@@ -17,19 +17,19 @@ def get_genre_list():
                 file_key = input("Please input a number from 1 to 5.\n")
 
         if file_key == '1':
-            file_str = 'Music.txt'
+            file_str = 'textfiles\Music.txt'
             list_type = 'Music'
         elif file_key == '2':
-            file_str = 'Movies.txt'
+            file_str = 'textfiles\Movies.txt'
             list_type = 'Movies'
         elif file_key == '3':
-            file_str = 'Games.txt'
+            file_str = 'textfiles\Games.txt'
             list_type = 'Games'
         elif file_key == '4':
-            file_str = 'Restaurants.txt'
+            file_str = 'textfiles\Restaurants.txt'
             list_type = 'Restaurants'
         elif file_key == '5':
-            file_str = input("Please enter the file name of the list you want to use.\n")
+            file_str = 'textfiles\\' + input("Please enter the file name of the list you want to use.\n")
             works = False
             while not works:
                 try:
@@ -50,3 +50,4 @@ def get_genre_list():
 
     return genre_list
 
+print(get_genre_list())
