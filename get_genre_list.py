@@ -2,7 +2,7 @@ def get_genre_list():
 
     def get_file_key():
 
-        file_key = input("What kind of list do you want? Please input the associated number.\n"
+        file_key = input("\nWhat kind of list do you want? Please input the associated number.\n"
                          "(1) Music\n"
                          "(2) Movies\n"
                          "(3) Games\n"
