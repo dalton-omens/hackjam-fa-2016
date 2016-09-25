@@ -1,4 +1,4 @@
-import webbrowser
+import webbrowser, time
 
 def common_interests(genre_list, preferences):
 	preferences_list = []
@@ -21,7 +21,8 @@ def suggestions(genre_list, shared_interest):
 		state = input('What state are you in? Use state abbreviations only: (Ex.CA)\n')
 		suggested_site = 'https://www.yelp.com/search?find_desc=' + shared_interest + '&find_loc=' + city + ',' + state
 
-	suggested_print = ('For ' + shared_interest + ' ' + genre_list[-1].lower() + ' suggestions, Go to ' + suggested_site)
+	suggested_print = ('Taking you to' + suggested_site + "...")
 	print(suggested_print)
+	time.sleep(3)
 	webbrowser.open(suggested_site)
 
