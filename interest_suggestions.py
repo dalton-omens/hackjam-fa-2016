@@ -13,7 +13,7 @@ def suggestions(genre_list, shared_interest):
 	if genre_list[-1] == 'Music':
 		suggested_site = 'https://play.spotify.com/search/' + shared_interest
 	elif genre_list[-1] == 'Movies':
-		suggested_site = 'http://www.metacritic.com/browse/movies/genre/metascore/' + shared_interest
+		suggested_site = 'http://www.metacritic.com/browse/movies/genre/metascore/' + shared_interest + '?view=condensed'
 	elif genre_list[-1] == 'Games':
 		suggested_site = 'http://www.metacritic.com/browse/games/genre/metascore/' + shared_interest
 	elif genre_list[-1] == 'Restaurants':
@@ -21,7 +21,7 @@ def suggestions(genre_list, shared_interest):
 		state = input('What state are you in? Use state abbreviations only: (Ex.CA)\n')
 		suggested_site = 'https://www.yelp.com/search?find_desc=' + shared_interest + '&find_loc=' + city + ',' + state
 
-	suggested_print = ('Taking you to ' + suggested_site + "...")
+	suggested_print = ('Taking you to' + suggested_site + "...")
 	print(suggested_print)
 	time.sleep(3)
 	webbrowser.open(suggested_site)
