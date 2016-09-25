@@ -1,5 +1,5 @@
 def get_genre_list():
-
+#example output: ['Rock', 'Jazz', 'Pop', 'Hip-hop', 'Classical', 'Rap', 'Dubstep', 'Country', '80s', '70s', '60s', '50s', 'genre of music', 'Music']
     def get_file_key():
 
         file_key = input("What kind of list do you want? Please input the associated number.\n"
@@ -49,3 +49,4 @@ def get_genre_list():
     genre_list = genres + [type_string] + [list_type]
 
     return genre_list
+
