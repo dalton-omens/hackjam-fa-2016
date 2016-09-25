@@ -21,8 +21,7 @@ def suggestions(genre_list, shared_interest):
 		state = input('What state are you in? Use state abbreviations only: (Ex.CA)\n')
 		suggested_site = 'https://www.yelp.com/search?find_desc=' + shared_interest + '&find_loc=' + city + ',' + state + shared_interest
 
-	print(shared_interest, suggested_site)
-	suggested_print = ('For ' + shared_interest + ' suggestions, Go to ' + suggested_site)
+	suggested_print = ('For ' + shared_interest + ' ' + genre_list[-1].lower() + ' suggestions, Go to ' + suggested_site)
 	print(suggested_print)
 	webbrowser.open(suggested_site)
 
