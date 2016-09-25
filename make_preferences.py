@@ -7,7 +7,7 @@ def make_preferences(genre_list, num_users):
         lst = lst[:-2] + '\n'
         return input(lst).strip()
     preferences = []
-    for user in range(num_users):
+    for user in range(int(num_users)):
         print('User ' + str(user + 1) + ':')
         user_preferences = []
         done = False
